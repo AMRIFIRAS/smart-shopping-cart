@@ -1,0 +1,52 @@
+name: smart_shopping_cart
+description: A mobile-first smart shopping cart graduation project prototype.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.13.3
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_web_plugins:
+    sdk: flutter
+  # Supplies Flutter's adaptive Material back-navigation icons on iOS.
+  cupertino_icons: ^1.0.8
+  mobile_scanner: ^7.4.2
+  qr_flutter: ^4.1.0
+  qr: ^3.0.2
+  shared_preferences: ^2.5.5
+  firebase_core: ^4.14.0
+  firebase_auth: ^6.6.1
+  pdf: ^3.13.0
+  printing: ^5.15.0
+  intl: ^0.20.3
+  web: ^1.1.1
+  flutter_localizations:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  image: ^4.10.1
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/products/
+  fonts:
+    - family: NotoSansArabic
+      fonts:
+        - asset: assets/fonts/NotoSansArabic.ttf
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/roboto-regular.ttf
+          weight: 400
+        - asset: assets/fonts/roboto-medium.ttf
+          weight: 500
+        - asset: assets/fonts/roboto-bold.ttf
+          weight: 700
+        - asset: assets/fonts/roboto-black.ttf
+          weight: 900

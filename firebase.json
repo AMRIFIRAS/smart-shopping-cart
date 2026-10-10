@@ -1,0 +1,18 @@
+{
+  "hosting": {
+    "public": "build/web",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**", "**/*.map"],
+    "rewrites": [{"source": "**", "destination": "/index.html"}],
+    "headers": [
+      {"source": "**", "headers": [
+        {"key": "X-Content-Type-Options", "value": "nosniff"},
+        {"key": "Referrer-Policy", "value": "strict-origin-when-cross-origin"},
+        {"key": "Permissions-Policy", "value": "camera=(self), microphone=(), geolocation=()"},
+        {"key": "Cache-Control", "value": "public, max-age=3600"}
+      ]},
+      {"source": "/index.html", "headers": [{"key": "Cache-Control", "value": "no-cache"}]},
+      {"source": "/flutter_bootstrap.js", "headers": [{"key": "Cache-Control", "value": "no-cache"}]},
+      {"source": "/main.dart.js", "headers": [{"key": "Cache-Control", "value": "no-cache"}]}
+    ]
+  }
+}
